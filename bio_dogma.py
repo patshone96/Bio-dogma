@@ -31,6 +31,7 @@ def main():
     # We use the if statement to code the different outputs
 
     # The first mode turns a DNA sequence into an RNA sequence
+
         if mode == 1:
 
             print("")
@@ -58,7 +59,7 @@ def main():
             print(RNA)
 
     # The second mode translates DNA into amino acids
-        if mode == 2:
+        elif mode == 2:
 
             print("")
             print("You selected: 2. DNA to amino acids")
@@ -80,7 +81,7 @@ def main():
             print(amino_acids)
 
     # The third mode translates RNA into amino acids
-        if mode == 3:
+        elif mode == 3:
 
             print("")
             print("You selected: 3. RNA to amino acids")
@@ -108,7 +109,7 @@ def main():
             print(amino_acids)
 
     # The forth mode gives you the CG % of a given DNA sequence
-        if mode == 4:
+        elif mode == 4:
 
             print("")
             print("You selected: 4. % of CG")
@@ -130,7 +131,7 @@ def main():
 
     # This mode takes a macromolecule sequence (DNA, RNA or amino acids) and, after some modifications, calculates
     # The % of polar, non_polar, positive and negative amino acids
-        if mode == 5:
+        elif mode == 5:
 
 
             print("")
@@ -202,7 +203,7 @@ def main():
             # Function to count the number of amino acids with a given property (prints the list)
             number_of(propert_list)
 
-        if mode == 6:
+        elif mode == 6:
             print("")
             print("You selected: 6. Look out for specific amino acids")
             print("")
@@ -275,6 +276,11 @@ def main():
 
             given_amino(amino_list, total_amino)
 
+        else:
+            print("Select a valid choice")
+            
+                
+                
         print("")
         cont = input("Would you like to continue using this program? (Type y to continue, anything else to leave) ")
         print("")
@@ -284,7 +290,7 @@ def main():
 
     # To finish the program, the user has to enter something
     print("")
-    shut = input("Press any key to end the program")
+    input("Press any key to end the program")
 
 # Gives how much of a given aminoacid there are on a provided sequence
 def given_amino(list, total):
@@ -553,9 +559,9 @@ def get_file():
     print("")
     name = input("Enter the name of your document (if it is not on the same folder, please, indicate its location): ")
     file = open(name)
+    output = ""
     for line in file: # for-each loop gives lines one at a time
-       return (line.strip())
-
+        return (line.strip())
 
 
 
